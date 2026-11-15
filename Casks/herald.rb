@@ -1,6 +1,6 @@
 cask "herald" do
-  version "0.1.6"
-  sha256 "3765214b62bfff8ca687dce610f51916b64f4845abdab3f6dc0abf74bf1c4e3e"
+  version "0.1.7"
+  sha256 "d04ee34d87f24c18c497eacf893ca94fa75618b87bf7dae8fe7e36bd7fcd26f4"
 
   url "https://pub-7e9db21348e6475e887bea715a5c979a.r2.dev/dmg/Async-Herald-#{version}.dmg",
       verified: "pub-7e9db21348e6475e887bea715a5c979a.r2.dev/"
@@ -15,10 +15,12 @@ cask "herald" do
     end
   end
 
+  # L'app se met à jour elle-même (mise à jour intégrée) : brew upgrade la laisse faire.
+  auto_updates true
   depends_on arch: :arm64
   depends_on :macos
 
-  app "Async Herald.app"
+  app "Herald.app"
 
   zap trash: [
     "~/Library/Application Support/fr.itsasync.herald.desktop",
