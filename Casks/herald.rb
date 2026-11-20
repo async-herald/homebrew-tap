@@ -1,6 +1,6 @@
 cask "herald" do
-  version "0.1.8"
-  sha256 "d4915fedcfb9ccf92ec05a490bd0cfe6c4d3992dced279839db216c7471cfa95"
+  version "0.1.9"
+  sha256 "f4f82ca34b695cef8c54736d7890f96bb59adda7921b54f5c69432ffe8df3575"
 
   url "https://pub-7e9db21348e6475e887bea715a5c979a.r2.dev/dmg/Async-Herald-#{version}.dmg",
       verified: "pub-7e9db21348e6475e887bea715a5c979a.r2.dev/"
