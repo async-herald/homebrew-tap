@@ -1,6 +1,6 @@
 cask "herald" do
-  version "0.2.1"
-  sha256 "e6a2e99ed83700b6b371a79edfb9ed09e49f1cfd85c5d8f09cf2af8ecbce5738"
+  version "0.2.2"
+  sha256 "b557a223f61c71b84e5d55c58200e24752b2ccffc19095afbf9a1b579fd2685b"
 
   url "https://pub-7e9db21348e6475e887bea715a5c979a.r2.dev/dmg/Async-Herald-#{version}.dmg",
       verified: "pub-7e9db21348e6475e887bea715a5c979a.r2.dev/"
@@ -17,8 +17,8 @@ cask "herald" do
 
   # L'app se met à jour elle-même (mise à jour intégrée) : brew upgrade la laisse faire.
   auto_updates true
-  depends_on arch: :arm64
-  depends_on :macos
+  # App universelle (Apple Silicon et Intel), macOS 11 minimum (LSMinimumSystemVersion).
+  depends_on macos: ">= :big_sur"
 
   app "Herald.app"
 
